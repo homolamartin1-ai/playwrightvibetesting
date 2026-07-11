@@ -75,23 +75,37 @@ I should see the example test pass. Report the result back to me.
 
 ---
 
-## Prompt 3: Verify the Playwright MCP Connection
+## Prompt 3: Set Up and Verify Playwright MCP
 *Used in: Section 3, Clip 4 — "Connect Playwright MCP"*
 
-Use this **after** you have added the Playwright MCP server to Antigravity's MCP
-config and restarted the app (see `udemy-article-mcp-setup.md`).
+The agent configures the MCP server itself — you do not edit config by hand.
 
 ```
-Using the Playwright MCP browser tools, open a browser and navigate to
-https://example.com. Tell me the page title you see.
+Set up the Playwright MCP server in Antigravity for me — do not make me edit any
+config by hand — then verify it works. Work step by step and tell me what you do.
 
-If you cannot open a browser, the Playwright MCP server is not connected —
-tell me so I can check my MCP configuration.
+1. Find Antigravity's MCP configuration file for my operating system (create it
+   if it does not exist). Show me the path.
+2. Add an MCP server named "playwright" that runs the official Playwright MCP
+   server, without removing any servers already in the file:
+       command: npx
+       args:    ["@playwright/mcp@latest"]
+3. Make sure the browser is installed: run  npx playwright install chromium
+4. Tell me clearly whether Antigravity needs a reload or restart to load the new
+   server. If it does, tell me to reload now, then wait for me to confirm.
+5. Once the Playwright MCP browser tools are available, verify the connection:
+   open a browser to https://example.com and report the page title back to me.
+
+If any step fails, stop and tell me exactly what failed and what to try next.
 ```
 
-**Expected:** a browser window opens, navigates to example.com, and the agent
-reports the title "Example Domain". If nothing opens, the MCP connection is not
-live — recheck the config and restart Antigravity.
+**Expected:** the agent writes the MCP config, prompts you to reload if needed,
+then opens example.com and reports the title **"Example Domain"** — that confirms
+the connection is live. If it cannot open a browser after the reload, the server
+did not load — have it re-check the config path and the entry it added.
+
+> Fallback: if you would rather wire the config manually, the exact entry and
+> file paths are in `udemy-article-mcp-setup.md`.
 
 ---
 
