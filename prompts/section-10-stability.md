@@ -10,6 +10,7 @@ regression pass against the fixed app.
 | Prompt 2 — Enable traces and retries in config | **Section 10, Clip 1** — Killing Flakiness |
 | Prompt 3 — Debug a failure from its trace | **Section 10, Clip 2** — Traces, Videos, and the UI Debugger |
 | Prompt 4 — Regression pass on the fixed app | **Section 10, Clip 3** — Re-running Against the Fixed TechShop |
+| Prompt 5 — Implement the remaining fixes and re-verify | **Section 10, Clip 4** — Closing the Loop: Fix, Then Re-verify |
 
 ---
 
@@ -83,6 +84,38 @@ I expect the tests that failed against broken (the bug + regression cases) to no
 PASS against fixed. Report any test that is STILL red — for each, tell me whether
 the fix looks incomplete or our test is asserting the wrong thing.
 ```
+
+---
+
+## Prompt 5: Implement the Remaining Fixes and Re-verify
+*Used in: Section 10, Clip 4 — "Closing the Loop: Fix, Then Re-verify"*
+
+Close out the tests still red against the fixed app — because the app is genuinely
+still wrong, not the test. Triage first (Section 9 flake-triage), then fix and rerun.
+
+```
+Some tests are still failing against the FIXED TechShop app. For each one that
+triage confirmed is a REAL bug (not a flaky test):
+
+1. Trace the failure to the responsible code in
+   playwrightvibetesting/techshop/fixed-app (index.html / app.js / style.css).
+2. Explain the root cause, and propose the SMALLEST change that makes the app meet
+   the matching rule in playwrightvibetesting/techshop/requirements.md.
+3. Show me the proposed diff and WAIT for my approval before changing anything.
+4. After I approve, apply the change to the fixed app.
+
+When all approved fixes are in, re-run the whole suite against the fixed app:
+   npx playwright test
+
+Report the result. Do NOT weaken, skip, or delete any test to force a pass — the
+app must actually satisfy the test. We are done only when the run is fully green
+because the app is correct.
+```
+
+**Expected:** the still-red tests turn green because the fixed app was corrected —
+not because the tests were loosened. A fully green run against fixed-app means
+verification is genuinely complete: find → fix → re-verify, with you approving
+every change that lands.
 
 **Expected:** a green (or near-green) run against the fixed app. Any remaining red
 is real information about either the fix or the test.
