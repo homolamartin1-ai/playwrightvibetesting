@@ -6,11 +6,13 @@ Antigravity chat; the agent runs the commands and reports back.
 ## Course reference
 | Prompt | Used in clip |
 |--------|-------------|
-| Prompt 1 — Fork and clone the course repo | **Section 3, Clip 1** — Fork and Clone the Course Repo |
-| Prompt 2 — Install Playwright and browsers | **Section 3, Clip 2** — Installing Node, Playwright, and the Browsers |
-| Prompt 3 — Verify the Playwright MCP connection | **Section 3, Clip 3** — Installing Antigravity + Connecting Playwright MCP |
-| Prompt 4 — Serve TechShop locally | **Section 3, Clip 4** — Running TechShop Locally |
-| Prompt 5 — Your first vibe test | **Section 3, Clip 5** — Your First Vibe Test |
+| Prompt 1 — Fork and clone the course repo | **Section 3, Clip 2** — Fork and Clone the Course Repo |
+| Prompt 2 — Install Playwright and browsers | **Section 3, Clip 3** — Install Playwright into the Repo |
+| Prompt 3 — Verify the Playwright MCP connection | **Section 3, Clip 4** — Connect Playwright MCP |
+| Prompt 4 — Serve TechShop locally | **Section 3, Clip 5** — Running TechShop Locally |
+| Prompt 5 — Your first vibe test | **Section 3, Clip 6** — Your First Vibe Test |
+
+> **Setup order:** Clip 1 installs Node + Antigravity, so from Prompt 1 on you paste everything into Antigravity's terminal/chat.
 
 > MCP config and account setup are step-by-step in `udemy-article-mcp-setup.md`.
 > Fork from: **https://github.com/homolamartin1-ai/playwrightvibetesting**
@@ -18,7 +20,7 @@ Antigravity chat; the agent runs the commands and reports back.
 ---
 
 ## Prompt 1: Fork and Clone the Course Repo
-*Used in: Section 3, Clip 1 — "Fork and Clone the Course Repo"*
+*Used in: Section 3, Clip 2 — "Fork and Clone the Course Repo"*
 
 First, on GitHub, open **https://github.com/homolamartin1-ai/playwrightvibetesting**
 and click **Fork** (top-right) to create your own copy under your account. This is
@@ -45,7 +47,7 @@ the app under test and where your tests, skills, and pipeline will live.
 ---
 
 ## Prompt 2: Install Playwright and Browsers
-*Used in: Section 3, Clip 2 — "Installing Node, Playwright, and the Browsers"*
+*Used in: Section 3, Clip 3 — "Install Playwright into the Repo"*
 
 Paste this into the Antigravity chat:
 
@@ -74,7 +76,7 @@ I should see the example test pass. Report the result back to me.
 ---
 
 ## Prompt 3: Verify the Playwright MCP Connection
-*Used in: Section 3, Clip 3 — "Installing Antigravity + Connecting Playwright MCP"*
+*Used in: Section 3, Clip 4 — "Connect Playwright MCP"*
 
 Use this **after** you have added the Playwright MCP server to Antigravity's MCP
 config and restarted the app (see `udemy-article-mcp-setup.md`).
@@ -94,7 +96,7 @@ live — recheck the config and restart Antigravity.
 ---
 
 ## Prompt 4: Serve TechShop Locally
-*Used in: Section 3, Clip 4 — "Running TechShop Locally"*
+*Used in: Section 3, Clip 5 — "Running TechShop Locally"*
 
 ```
 Serve the broken TechShop app so Playwright has a stable URL to target.
@@ -114,7 +116,7 @@ in this terminal for the rest of the course.
 ---
 
 ## Prompt 5: Your First Vibe Test
-*Used in: Section 3, Clip 5 — "Your First Vibe Test"*
+*Used in: Section 3, Clip 6 — "Your First Vibe Test"*
 
 TechShop must be running on http://localhost:3000 and Playwright MCP connected.
 
