@@ -2,7 +2,8 @@
 
 The agent drives the live browser via Playwright MCP. Nothing here writes test
 files yet — this is discovery (the "exploration hat"). We work one flow at a
-time: explore it, capture what we found, then repeat for the next flow.
+time: explore it, capture what we found, repeat for the next flow, then verify the
+whole thing against the requirements.
 
 ## Course reference
 | Prompt | Used in clip |
@@ -10,8 +11,10 @@ time: explore it, capture what we found, then repeat for the next flow.
 | Prompt 1 — Explore the login flow | **Section 4, Clip 2** — The Agent Drives the Live App via MCP |
 | Prompt 2 — Capture the login exploration notes | **Section 4, Clip 3** — Capturing Flows, Selectors, and Surprises |
 | Prompt 3 — Repeat: explore & capture the remaining flows | **Section 4, Clip 3** — Capturing Flows, Selectors, and Surprises |
+| Prompt 4 — Check coverage against the requirements | **Section 4, Clip 4** — Check Coverage Against the Requirements |
 
 > TechShop (broken) must be running on http://localhost:3000.
+> Requirements: `playwrightvibetesting/techshop/requirements.md`.
 
 ---
 
@@ -93,3 +96,37 @@ Still exploration only — do not write test files.
 **Expected:** `exploration-notes.md` now covers all four flows — login (from
 Prompt 2) plus catalog, cart, and checkout — the source material for the test
 matrix in Section 7.
+
+---
+
+## Prompt 4: Check Coverage Against the Requirements
+*Used in: Section 4, Clip 4 — "Check Coverage Against the Requirements"*
+
+Hold the exploration up against the spec — cover the gaps, tie findings to rules.
+
+```
+Read two files:
+- playwrightvibetesting/techshop/requirements.md — the spec of what TechShop should do
+- playwrightvibetesting/exploration-notes.md — what we actually explored and found
+
+Do two things and report back:
+
+1. COVERAGE — go requirement by requirement. Did our exploration cover it? List
+   every requirement we did NOT check yet. For each gap, explore it now using the
+   Playwright MCP browser on http://localhost:3000 and record what you find.
+
+2. COMPLIANCE — for every requirement we did check, state whether the app matches
+   it (PASS) or deviates (FAIL). For each FAIL, quote the exact requirement it
+   violates.
+
+Then update playwrightvibetesting/exploration-notes.md: add any newly explored
+flows, and tag each item under Surprises with the requirement it breaks. Finish
+with a short coverage summary: requirements checked, passed, failed, and any that
+are still untestable (for example, blocked by another bug).
+
+Still exploration — do not write test files.
+```
+
+**Expected:** the notes now map findings to specific requirements, with a coverage
+summary. That traceability is what makes the Section 7 test matrix complete and
+defensible — every planned test traces back to a requirement.

@@ -22,11 +22,13 @@ Full setup — Playwright install, Antigravity, and Playwright MCP — is Sectio
 playwrightvibetesting/
 ├── techshop/                 ← The app under test (static HTML/CSS/JS)
 │   ├── broken-app/           ← Broken version — 15 bugs planted for testing
-│   └── fixed-app/            ← Fixed version — used in the verification section
+│   ├── fixed-app/            ← Fixed version — used in the verification section
+│   └── requirements.md       ← Sprint 1 spec — the Section 4 coverage check
 │
 ├── capstone/                 ← Your independent project (Section 12)
 │   ├── booknow-broken/       ← Hotel booking app — bugs planted, count not disclosed
-│   └── booknow-fixed/        ← Fixed version — used for your verification phase
+│   ├── booknow-fixed/        ← Fixed version — used for your verification phase
+│   └── requirements.md       ← BookNow spec — verify the app against it
 │
 ├── tests/                    ← The Playwright suite you build across the course
 │   └── (specs land here, flow by flow)
@@ -135,7 +137,7 @@ served on http://localhost:3000.
 | Section | What to grab |
 |---------|-------------|
 | 3 — Setup | `techshop/broken-app`, `prompts/section-03-setup.md`, MCP config |
-| 4 — Exploration | `techshop/broken-app`, `prompts/section-04-exploration.md` |
+| 4 — Exploration | `techshop/broken-app`, `techshop/requirements.md`, `prompts/section-04-exploration.md` |
 | 5 — Skills | `prompts/section-05-skills.md` → builds `skills/` |
 | 6 — Fundamentals | `prompts/section-06-fundamentals.md` |
 | 7 — Test cases | `prompts/section-07-testcases.md` |
@@ -143,4 +145,4 @@ served on http://localhost:3000.
 | 9 — Bugs | `prompts/section-09-bugs.md` |
 | 10 — Stability | `prompts/section-10-stability.md`, `techshop/fixed-app` |
 | 11 — CI | `prompts/section-11-ci.md`, `.github/workflows/playwright.yml` |
-| 12 — Capstone | `prompts/section-12-capstone.md`, `capstone/booknow-broken` + `booknow-fixed` |
+| 12 — Capstone | `prompts/section-12-capstone.md`, `capstone/booknow-broken` + `booknow-fixed`, `capstone/requirements.md` |

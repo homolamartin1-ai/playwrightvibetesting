@@ -16,13 +16,17 @@ confirmation. Different domain, different rules (dates, check-in before
 check-out, guest counts, availability). Adapt your prompts; do not copy TechShop
 specifics blindly.
 
+The spec is in `playwrightvibetesting/capstone/requirements.md` — use it to check
+coverage and tie every finding to a requirement, exactly like Section 4.
+
 ---
 
 ## Task → prompt to adapt
 
 | Capstone task | Adapt from | What changes for BookNow |
 |---------------|-----------|--------------------------|
-| 1. Explore with the agent | `section-04-exploration.md` | New flows: login → search → booking form → confirmation. Watch the date logic. |
+| 1. Explore with the agent | `section-04-exploration.md` (Prompt 1–3) | New flows: login → search → booking form → confirmation. Watch the date logic. |
+| 1b. Check coverage vs the spec | `section-04-exploration.md` (Prompt 4) | Read `capstone/requirements.md`; explore any uncovered rule and tag each finding to the requirement it breaks. |
 | 2. Design test cases | `section-07-testcases.md` (Prompt 1–2) + `skills/test-case-design.md` | Add booking-specific edges: check-in after check-out, zero guests, past dates. |
 | 3. Write the suite | `section-08-writing-suite.md` + `skills/test-authoring.md` | Page objects for the booking flow; refine the skill if the new domain exposes a gap. |
 | 4. Run, triage, report | `section-09-bugs.md` + `skills/flake-triage.md` + `skills/bug-reporting.md` | Same loop; you decide real-bug vs flaky and write the reports. |
