@@ -1,7 +1,7 @@
 # Section 5 — Skills for AI Agents: Building the Toolkit
 
 The centerpiece. Each prompt creates one reusable skill file in
-`course-repo/skills/`, then a follow-up prompt proves the skill works. These
+`playwrightvibetesting/skills/`, then a follow-up prompt proves the skill works. These
 skills are reused (and refined) for the rest of the course — and you keep them.
 
 ## Course reference
@@ -16,7 +16,7 @@ skills are reused (and refined) for the rest of the course — and you keep them
 
 > A "skill" here is a markdown file the agent reads before doing a task, so it
 > applies your standards every time instead of improvising per prompt. In
-> Antigravity, save these to `course-repo/skills/` and reference them in prompts.
+> Antigravity, save these to `playwrightvibetesting/skills/` and reference them in prompts.
 
 ---
 
@@ -24,7 +24,7 @@ skills are reused (and refined) for the rest of the course — and you keep them
 *Used in: Section 5, Clip 2 — "Skill 1: Test-Case Design"*
 
 ```
-Create a reusable skill file at course-repo/skills/test-case-design.md.
+Create a reusable skill file at playwrightvibetesting/skills/test-case-design.md.
 
 Its purpose: given a feature and exploration notes, produce a complete test
 matrix. Write it as instructions YOU (the agent) will follow whenever I ask you
@@ -46,8 +46,8 @@ Keep it concise and instructional. This file is the standard, not an example.
 *Used in: Section 5, Clip 2*
 
 ```
-Following course-repo/skills/test-case-design.md exactly, and using
-course-repo/exploration-notes.md, design the test cases for the LOGIN feature
+Following playwrightvibetesting/skills/test-case-design.md exactly, and using
+playwrightvibetesting/exploration-notes.md, design the test cases for the LOGIN feature
 only. Output the matrix so I can review it.
 ```
 
@@ -60,7 +60,7 @@ format. If it drifts from the format, fix the skill, not the output.
 *Used in: Section 5, Clip 3 — "Skill 2: Test Authoring"*
 
 ```
-Create a reusable skill file at course-repo/skills/test-authoring.md.
+Create a reusable skill file at playwrightvibetesting/skills/test-authoring.md.
 
 Its purpose: turn test cases into Playwright tests to a consistent standard.
 Write it as instructions you will follow whenever I ask you to write tests. It
@@ -86,8 +86,8 @@ Keep it concise. This is the rulebook the suite is built on.
 *Used in: Section 5, Clip 3*
 
 ```
-Following course-repo/skills/test-authoring.md, write the login spec from the
-test cases we designed. Put it at course-repo/tests/login.spec.ts. Then walk me
+Following playwrightvibetesting/skills/test-authoring.md, write the login spec from the
+test cases we designed. Put it at playwrightvibetesting/tests/login.spec.ts. Then walk me
 through how it satisfies each rule in the skill.
 ```
 
@@ -100,7 +100,7 @@ hardcoded secrets. Review it with the Section 5 checklist before trusting it.
 *Used in: Section 5, Clip 4 — "Skill 3: Bug Reporting"*
 
 ```
-Create a reusable skill file at course-repo/skills/bug-reporting.md.
+Create a reusable skill file at playwrightvibetesting/skills/bug-reporting.md.
 
 Its purpose: turn a failing test + its trace into a developer-ready bug report.
 Write it as instructions you will follow whenever I ask you to report a bug. It
@@ -129,7 +129,7 @@ have a failing test already) feed one failure through it as a quick test.
 *Used in: Section 5, Clip 5 — "Skill 4: Flake Triage"*
 
 ```
-Create a reusable skill file at course-repo/skills/flake-triage.md.
+Create a reusable skill file at playwrightvibetesting/skills/flake-triage.md.
 
 Its purpose: decide whether a failing test is a REAL BUG or a FLAKY TEST. Write
 it as instructions you will follow whenever I give you a failure. It must require
@@ -149,5 +149,5 @@ Require the agent to ask to re-run a test a few times when consistency is unclea
 Keep it concise.
 ```
 
-**Expected:** four skill files now live in `course-repo/skills/`. They are the
+**Expected:** four skill files now live in `playwrightvibetesting/skills/`. They are the
 toolkit for Sections 7–12 — and the thing you carry to your next project.

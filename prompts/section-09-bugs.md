@@ -33,7 +33,7 @@ test name and the one-line reason (expected vs actual). Do not fix anything yet.
 *Used in: Section 9, Clip 2 — "App Bug or Test Bug?"*
 
 ```
-Following course-repo/skills/flake-triage.md, triage this failing test:
+Following playwrightvibetesting/skills/flake-triage.md, triage this failing test:
 [paste the test name and its error, or point to it in the report].
 
 Work through the checklist (consistency, cause, evidence) and classify it as
@@ -65,13 +65,13 @@ the consistent, app-caused ones. That distinction is the whole point.
 *Used in: Section 9, Clip 3 — "The Bug-Reporting Skill in Action"*
 
 ```
-Following course-repo/skills/bug-reporting.md, turn this confirmed failure into a
+Following playwrightvibetesting/skills/bug-reporting.md, turn this confirmed failure into a
 bug report:
 [the discount-calculation test failure].
 
 Use the failing test and its Playwright trace as the source. Output the report in
 the skill's format (title, environment, steps, expected, actual, severity +
-justification, evidence). Save it to course-repo/bug-reports/BUG-discount.md.
+justification, evidence). Save it to playwrightvibetesting/bug-reports/BUG-discount.md.
 ```
 
 **Expected:** a specific title, separated expected/actual, justified severity, and
@@ -85,7 +85,7 @@ the trace referenced — a report a developer can act on without talking to you.
 ```
 Following bug-reporting.md, generate a report for each remaining CONFIRMED real
 bug from the suite run (skip anything triaged as flaky). Save each to
-course-repo/bug-reports/ as its own file.
+playwrightvibetesting/bug-reports/ as its own file.
 
 Then give me a summary table: bug ID, title, severity, and the test that caught
 it. I will review every report before any of them get filed.

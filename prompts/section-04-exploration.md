@@ -69,7 +69,7 @@ anything it skipped. You are the senior tester guiding a fast junior.
 
 ```
 Based on the exploration you just did on TechShop, create a file at
-course-repo/exploration-notes.md with three sections:
+playwrightvibetesting/exploration-notes.md with three sections:
 
 ## Flows
 For each area (login, catalog, cart, checkout), the exact steps to move through

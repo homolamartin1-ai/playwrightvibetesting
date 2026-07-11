@@ -16,7 +16,7 @@ The agent drafts the workflow; you review it (especially secrets) and ship it.
 *Used in: Section 11, Clip 2 — "The Agent Writes the Workflow"*
 
 ```
-Create a GitHub Actions workflow at course-repo/.github/workflows/playwright.yml
+Create a GitHub Actions workflow at playwrightvibetesting/.github/workflows/playwright.yml
 that, on every push and pull request:
 
 1. checks out the repo
@@ -39,7 +39,7 @@ the env: block — never hardcode them. Explain each section after you write it.
 Never commit CI config you have not read. Make the agent justify it.
 
 ```
-Walk me through course-repo/.github/workflows/playwright.yml and confirm:
+Walk me through playwrightvibetesting/.github/workflows/playwright.yml and confirm:
 - the trigger (push + PR) is correct
 - the steps are in a sensible order (install before run, app served before tests)
 - browsers are installed with --with-deps
@@ -60,7 +60,7 @@ Flag anything that does not meet these and fix it.
 
 ```
 Commit the workflow and push it so the pipeline runs:
-   git add course-repo/.github/workflows/playwright.yml
+   git add playwrightvibetesting/.github/workflows/playwright.yml
    git commit -m "Add Playwright CI workflow"
    git push
 

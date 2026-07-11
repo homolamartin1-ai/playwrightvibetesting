@@ -4,11 +4,11 @@ This is the independent project. By design, there are **no ready-made prompts
 here** — writing them is part of the exercise. Instead, this file maps each
 capstone task to the prompt file you adapt from the main course.
 
-The app: `course-repo/capstone/booknow-broken` (and `booknow-fixed` for the
+The app: `playwrightvibetesting/capstone/booknow-broken` (and `booknow-fixed` for the
 verification pass). Serve it the same way as TechShop:
 
 ```
-cd course-repo/capstone/booknow-broken && npx serve . -l 3000
+cd playwrightvibetesting/capstone/booknow-broken && npx serve . -l 3000
 ```
 
 BookNow is a hotel booking app — login, search results, booking form,
@@ -34,7 +34,7 @@ specifics blindly.
 ## The one rule
 
 Reuse your **skills** — do not start from zero. The four files in
-`course-repo/skills/` are the whole point: you begin the capstone from leverage,
+`playwrightvibetesting/skills/` are the whole point: you begin the capstone from leverage,
 exactly like you will begin your next real project. If a skill shows a gap on
 this new domain, **refine the skill**, then continue.
 

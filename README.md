@@ -2,12 +2,24 @@
 
 Resources for the Udemy course. Everything you need to follow along is in this repo.
 
+## Getting started
+
+**Fork this repo** (click **Fork**, top-right) so you have your own copy to commit
+to and push from, then clone your fork:
+
+```
+git clone git@github.com:<your-username>/playwrightvibetesting.git
+cd playwrightvibetesting
+```
+
+Full setup — Playwright install, Antigravity, and Playwright MCP — is Section 3.
+
 ---
 
 ## What's in here
 
 ```
-course-repo/
+playwrightvibetesting/
 ├── techshop/                 ← The app under test (static HTML/CSS/JS)
 │   ├── broken-app/           ← Broken version — 15 bugs planted for testing
 │   └── fixed-app/            ← Fixed version — used in the verification section
@@ -19,7 +31,7 @@ course-repo/
 ├── tests/                    ← The Playwright suite you build across the course
 │   └── (specs land here, flow by flow)
 │
-├── skills/                   ← The 4 reusable AI Skills built in Section 6
+├── skills/                   ← The 4 reusable AI Skills built in Section 5
 │   ├── test-case-design.md
 │   ├── test-authoring.md
 │   ├── bug-reporting.md
@@ -28,8 +40,8 @@ course-repo/
 ├── prompts/                  ← Every Antigravity prompt, by section + clip
 │   ├── section-03-setup.md
 │   ├── section-04-exploration.md
-│   ├── section-05-fundamentals.md
-│   ├── section-06-skills.md
+│   ├── section-05-skills.md
+│   ├── section-06-fundamentals.md
 │   ├── section-07-testcases.md
 │   ├── section-08-writing-suite.md
 │   ├── section-09-bugs.md
@@ -124,8 +136,8 @@ served on http://localhost:3000.
 |---------|-------------|
 | 3 — Setup | `techshop/broken-app`, `prompts/section-03-setup.md`, MCP config |
 | 4 — Exploration | `techshop/broken-app`, `prompts/section-04-exploration.md` |
-| 5 — Fundamentals | `prompts/section-05-fundamentals.md` |
-| 6 — Skills | `prompts/section-06-skills.md` → builds `skills/` |
+| 5 — Skills | `prompts/section-05-skills.md` → builds `skills/` |
+| 6 — Fundamentals | `prompts/section-06-fundamentals.md` |
 | 7 — Test cases | `prompts/section-07-testcases.md` |
 | 8 — Writing the suite | `prompts/section-08-writing-suite.md`, `tests/` |
 | 9 — Bugs | `prompts/section-09-bugs.md` |

@@ -16,8 +16,8 @@ to produce a complete, prioritised test matrix.
 *Used in: Section 7, Clip 1 — "Turning Exploration Notes into a Test Matrix"*
 
 ```
-Following course-repo/skills/test-case-design.md, and using
-course-repo/exploration-notes.md as the source of truth for how TechShop behaves,
+Following playwrightvibetesting/skills/test-case-design.md, and using
+playwrightvibetesting/exploration-notes.md as the source of truth for how TechShop behaves,
 design the complete test matrix for these features:
 
 - Login
@@ -26,7 +26,7 @@ design the complete test matrix for these features:
 - Checkout (card validation, submission, confirmation)
 
 Produce positive, negative, and edge cases for each, in the skill's format.
-Save the result to course-repo/test-cases.md, grouped by feature.
+Save the result to playwrightvibetesting/test-cases.md, grouped by feature.
 ```
 
 ---
@@ -37,7 +37,7 @@ Save the result to course-repo/test-cases.md, grouped by feature.
 You are the editor — make the agent prove its coverage.
 
 ```
-Review course-repo/test-cases.md. For each feature, check that all three
+Review playwrightvibetesting/test-cases.md. For each feature, check that all three
 categories are genuinely covered:
 
 - Did any feature get only happy-path (positive) cases? Add the missing
@@ -72,7 +72,7 @@ We already know TechShop has these bugs (confirmed in exploration):
 - Browser tab title shows "Untitled"
 - Navbar is visible on the login page before authentication
 
-For each, add a REGRESSION test case to course-repo/test-cases.md that asserts the
+For each, add a REGRESSION test case to playwrightvibetesting/test-cases.md that asserts the
 CORRECT behaviour. These should FAIL against the broken app and PASS against the
 fixed app. Mark each clearly as a regression case and note the related bug.
 

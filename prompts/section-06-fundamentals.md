@@ -5,7 +5,7 @@ This section is read-only — we do not write new tests here. Instead we read th
 review it. We use the agent as a tutor and reviewer so that, from here on, you can
 read and critique everything it writes.
 
-> Specimen: `course-repo/tests/login.spec.ts` (written in Section 5, Prompt 2b).
+> Specimen: `playwrightvibetesting/tests/login.spec.ts` (written in Section 5, Prompt 2b).
 
 ## Course reference
 | Prompt | Used in clip |
@@ -22,7 +22,7 @@ read and critique everything it writes.
 
 ```
 Look at the login spec the test-authoring skill wrote in Section 5
-(course-repo/tests/login.spec.ts). Explain it to me line by line as if I have
+(playwrightvibetesting/tests/login.spec.ts). Explain it to me line by line as if I have
 never written a test before:
 - what each locator finds and why it is or is not a stable locator
 - what each assertion actually checks
@@ -65,7 +65,7 @@ The prompt to internalise — your standard review pass on every test the agent
 writes from here on.
 
 ```
-Review course-repo/tests/login.spec.ts critically and report on three things:
+Review playwrightvibetesting/tests/login.spec.ts critically and report on three things:
 
 1. LOCATORS — are they readable and stable (role/label based), or fragile
    structural chains that will break on a redesign? Flag any fragile ones.
@@ -90,7 +90,7 @@ the lesson; the other half is catching it when it does not.)
 The habit from the speech: a test that has never failed cannot be trusted.
 
 ```
-I want to prove a test can actually fail. In course-repo/tests/login.spec.ts,
+I want to prove a test can actually fail. In playwrightvibetesting/tests/login.spec.ts,
 temporarily change one assertion to expect something we know is wrong (e.g. the
 wrong page text after login), run the test, and confirm it goes RED. Then revert
 the change and confirm it goes GREEN again. Report both results.

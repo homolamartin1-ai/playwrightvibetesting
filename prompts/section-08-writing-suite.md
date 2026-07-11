@@ -12,8 +12,8 @@ on camera when it hits its limits.
 | Prompt 4 — Write the checkout spec (with blocker) | **Section 8, Clip 3** — Building Tests Flow by Flow |
 | Prompt 5 — Refine the skill when it falls short | **Section 8, Clip 4** — Hitting a Wall: Refining the Skill |
 
-> All prompts follow `course-repo/skills/test-authoring.md` and use
-> `course-repo/test-cases.md`. TechShop (broken) runs on http://localhost:3000.
+> All prompts follow `playwrightvibetesting/skills/test-authoring.md` and use
+> `playwrightvibetesting/test-cases.md`. TechShop (broken) runs on http://localhost:3000.
 
 ---
 
@@ -21,13 +21,13 @@ on camera when it hits its limits.
 *Used in: Section 8, Clip 2 — "Auth, Fixtures, and Test Data Isolation"*
 
 ```
-Following course-repo/skills/test-authoring.md, create a Playwright fixture that
+Following playwrightvibetesting/skills/test-authoring.md, create a Playwright fixture that
 logs in once and provides an authenticated page to any test that needs it.
 
-- Put it in course-repo/tests/fixtures.ts
+- Put it in playwrightvibetesting/tests/fixtures.ts
 - Read credentials from env vars TEST_EMAIL and TEST_PASSWORD (no hardcoding)
 - Expose an authenticated `page` fixture tests can request
-- Also create course-repo/.env.example listing TEST_EMAIL and TEST_PASSWORD
+- Also create playwrightvibetesting/.env.example listing TEST_EMAIL and TEST_PASSWORD
 
 Explain how a test will use the fixture so it does not repeat the login steps.
 ```
@@ -38,8 +38,8 @@ Explain how a test will use the fixture so it does not repeat the login steps.
 *Used in: Section 8, Clip 3 — "Building Tests Flow by Flow"*
 
 ```
-Following course-repo/skills/test-authoring.md and the LOGIN cases in
-course-repo/test-cases.md, write course-repo/tests/login.spec.ts.
+Following playwrightvibetesting/skills/test-authoring.md and the LOGIN cases in
+playwrightvibetesting/test-cases.md, write playwrightvibetesting/tests/login.spec.ts.
 
 Use a light LoginPage page object for locators/actions. Cover the positive,
 negative, edge, and regression login cases. Then run it:
@@ -58,7 +58,7 @@ is the suite working. Review locators and assertions before moving on.
 
 ```
 Following the authoring skill and the CART cases in test-cases.md, write
-course-repo/tests/cart.spec.ts with a CartPage object. Cover: adding items,
+playwrightvibetesting/tests/cart.spec.ts with a CartPage object. Cover: adding items,
 changing quantity, the below-1 boundary, the discount calculation, and the order
 total updating. Use the login fixture so each test starts authenticated and
 isolated. Run it and report results.
@@ -74,7 +74,7 @@ as designed.
 
 ```
 Following the authoring skill and the CHECKOUT cases in test-cases.md, write
-course-repo/tests/checkout.spec.ts with a CheckoutPage object. Cover card
+playwrightvibetesting/tests/checkout.spec.ts with a CheckoutPage object. Cover card
 expiry validation, CVV validation, empty-form submission, and the confirmation
 order reference.
 
@@ -98,7 +98,7 @@ place where your output was weak or inconsistent — for example a fragile locat
 on the checkout form, or repetitive page-object code.
 
 Do NOT just patch the individual test. Instead, update
-course-repo/skills/test-authoring.md with a new rule that prevents this class of
+playwrightvibetesting/skills/test-authoring.md with a new rule that prevents this class of
 problem in future. Show me the diff to the skill. Then regenerate the affected
 spec using the improved skill and confirm it is better.
 ```

@@ -17,7 +17,7 @@ regression pass against the fixed app.
 *Used in: Section 10, Clip 1 — "Killing Flakiness"*
 
 ```
-Audit every spec in course-repo/tests for flakiness risks and fix what you find:
+Audit every spec in playwrightvibetesting/tests for flakiness risks and fix what you find:
 
 - Manual waits / sleeps (page.waitForTimeout, fixed delays) → remove and rely on
   Playwright auto-waiting and web-first assertions
@@ -74,7 +74,7 @@ First serve the fixed app instead of the broken one:
 ```
 Stop the broken-app server. Serve the FIXED app on the same port so the suite
 points at it unchanged:
-   cd course-repo/techshop/fixed-app && npx serve . -l 3000
+   cd playwrightvibetesting/techshop/fixed-app && npx serve . -l 3000
 
 Then run the full suite against it:
    npx playwright test
