@@ -1,23 +1,24 @@
 # Section 4 — Exploring TechShop with an AI Agent
 
 The agent drives the live browser via Playwright MCP. Nothing here writes test
-files yet — this is discovery (the "exploration hat").
+files yet — this is discovery (the "exploration hat"). We work one flow at a
+time: explore it, capture what we found, then repeat for the next flow.
 
 ## Course reference
 | Prompt | Used in clip |
 |--------|-------------|
-| Prompt 1 — Explore a single flow | **Section 4, Clip 2** — The Agent Drives the Live App via MCP |
-| Prompt 2 — Full guided exploration | **Section 4, Clip 2** — The Agent Drives the Live App via MCP |
-| Prompt 3 — Capture exploration notes | **Section 4, Clip 3** — Capturing Flows, Selectors, and Surprises |
+| Prompt 1 — Explore the login flow | **Section 4, Clip 2** — The Agent Drives the Live App via MCP |
+| Prompt 2 — Capture the login exploration notes | **Section 4, Clip 3** — Capturing Flows, Selectors, and Surprises |
+| Prompt 3 — Repeat: explore & capture the remaining flows | **Section 4, Clip 3** — Capturing Flows, Selectors, and Surprises |
 
 > TechShop (broken) must be running on http://localhost:3000.
 
 ---
 
-## Prompt 1: Explore a Single Flow
+## Prompt 1: Explore the Login Flow
 *Used in: Section 4, Clip 2 — "The Agent Drives the Live App via MCP"*
 
-Start narrow so you can see the agent's reasoning before turning it loose.
+We start narrow — one flow — so you can watch the agent reason before scaling up.
 
 ```
 Using the Playwright MCP browser on http://localhost:3000, walk through the
@@ -28,66 +29,67 @@ LOGIN flow only. For each step:
 - flag anything that does not match your expectation
 
 Try a normal login (demo@techshop.com / password123), then try submitting the
-form with empty fields, then try a wrong password. Do not fix anything and do
-not write tests — just observe and report.
+form with empty fields, then try a wrong password. Watch the password field
+specifically. Do not fix anything and do not write tests — just observe and report.
 ```
+
+**Note:** the agent will surface real login issues — password shown in plaintext,
+empty fields accepted, wrong credentials redirecting instead of erroring. It may
+also raise false alarms; confirm the real ones yourself and dismiss the rest.
 
 ---
 
-## Prompt 2: Full Guided Exploration
-*Used in: Section 4, Clip 2 — "The Agent Drives the Live App via MCP"*
-
-```
-Using the Playwright MCP browser on http://localhost:3000, explore the full
-TechShop user journey end to end:
-
-1. Login
-2. Browse the product catalog
-3. Add a product to the cart
-4. Open the cart and change the quantity (including trying to go below 1)
-5. Apply any discount and check the totals
-6. Proceed to checkout and fill the payment form
-7. Reach the confirmation page
-
-At each step, report what you did, what you saw, what you expected, and anything
-that looks like a bug. Pay attention to: the password field, cart math, quantity
-limits, the checkout button, card validation, the page title, and whether the
-navbar appears before login.
-
-This is exploration only — do not write test files.
-```
-
-**Note:** the agent will surface real issues (plaintext password, negative
-quantities, an unresponsive "Proceed to Checkout" button, etc.). It may also raise
-false alarms — confirm the real ones yourself, dismiss the rest, and steer it to
-anything it skipped. You are the senior tester guiding a fast junior.
-
----
-
-## Prompt 3: Capture Exploration Notes
+## Prompt 2: Capture the Login Exploration Notes
 *Used in: Section 4, Clip 3 — "Capturing Flows, Selectors, and Surprises"*
 
+Summarise **only what you just explored** — the login flow.
+
 ```
-Based on the exploration you just did on TechShop, create a file at
-playwrightvibetesting/exploration-notes.md with three sections:
+Based on the LOGIN exploration you just did, create a file at
+playwrightvibetesting/exploration-notes.md with a "## Login" section containing
+three parts:
 
-## Flows
-For each area (login, catalog, cart, checkout), the exact steps to move through
-it, written as a numbered list.
+### Flows
+The exact steps to log in, as a numbered list.
 
-## Selectors
-For each key element you interacted with, how to locate it. Prefer role-based or
-label-based locators (e.g. getByRole, getByLabel) over brittle CSS chains. List
-the element name and the recommended locator.
+### Selectors
+For each element you interacted with (email field, password field, sign-in
+button, error message), the recommended locator. Prefer role-based or
+label-based locators (getByRole, getByLabel) over brittle CSS chains.
 
-## Surprises
-Every place where actual behaviour did not match expected behaviour. For each:
-what you did, what you expected, what actually happened. These are our bug
-candidates for Section 7.
+### Surprises
+Every place login behaviour did not match expectation — what you did, what you
+expected, what actually happened. These are login bug candidates for Section 7.
 
-Keep it factual and concise — this file is the source material for designing
-test cases and writing the suite.
+Keep it factual and concise. Cover login only for now — we add the other flows next.
 ```
 
-**Expected output:** a structured `exploration-notes.md` we reuse in Sections 7
-and 8. The quality of this file determines the quality of the suite.
+---
+
+## Prompt 3: Repeat — Explore & Capture the Remaining Flows
+*Used in: Section 4, Clip 3 — "Capturing Flows, Selectors, and Surprises"*
+
+Same explore-then-capture loop, now for the rest of the app.
+
+```
+Repeat the exploration-and-capture loop for each of these flows, one at a time,
+using the Playwright MCP browser on http://localhost:3000:
+
+1. Catalog — browse products, prices, descriptions, stock status
+2. Cart — add a product, change quantity (including trying to go below 1), apply
+   a discount, check whether the totals update
+3. Checkout — fill the payment form, card validation, submit, confirmation page
+
+For each flow: explore it the same way you explored login (what you did / saw /
+expected / anything wrong), then APPEND a new "## Catalog", "## Cart", or
+"## Checkout" section to playwrightvibetesting/exploration-notes.md with the same
+Flows / Selectors / Surprises structure.
+
+Pay attention to: cart math and quantity limits, the checkout button, card expiry
+and CVV validation, the page title, and whether the navbar shows before login.
+Still exploration only — do not write test files.
+```
+
+**Expected:** `exploration-notes.md` now covers all four flows — login (from
+Prompt 2) plus catalog, cart, and checkout — the source material for the test
+matrix in Section 7.
