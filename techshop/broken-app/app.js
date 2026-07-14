@@ -73,11 +73,13 @@ function showToast(msg, type = '') {
 /* ══════════════════════════════════════════
    LOGIN — BUGGY
 ══════════════════════════════════════════ */
+const VALID_USERS = ['admin', 'demo@techshop.com'];
+
 function buggyLogin() {
   const user = document.getElementById('login-user').value;
   const pass = document.getElementById('login-pass').value;
 
-  if (user !== 'admin' || pass !== 'password123') {
+  if (!VALID_USERS.includes(user) || pass !== 'password123') {
     showPage('products');
     return;
   }

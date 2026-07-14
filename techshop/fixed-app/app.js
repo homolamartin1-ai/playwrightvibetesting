@@ -97,6 +97,8 @@ function markInput(id, hasError) {
 /* ══════════════════════════════════════════
    LOGIN
 ══════════════════════════════════════════ */
+const VALID_USERS = ['admin', 'demo@techshop.com'];
+
 function fixedLogin() {
   const user = document.getElementById('login-user').value.trim();
   const pass = document.getElementById('login-pass').value;
@@ -110,7 +112,7 @@ function fixedLogin() {
 
   if (!valid) return;
 
-  if (user !== 'admin' || pass !== 'password123') {
+  if (!VALID_USERS.includes(user) || pass !== 'password123') {
     const errEl = document.getElementById('login-error');
     document.getElementById('login-error-text').textContent = 'Invalid username or password. Please try again.';
     errEl.classList.remove('hidden');
