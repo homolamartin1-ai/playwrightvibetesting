@@ -39,6 +39,14 @@ playwrightvibetesting/
 │   ├── bug-reporting.md
 │   └── flake-triage.md
 │
+├── docs/                     ← Written guides — the companion to each lecture
+│   ├── setup-01-install-tools.md
+│   ├── setup-02-fork-and-clone.md
+│   ├── setup-03-playwright-mcp.md      ← MCP setup + troubleshooting
+│   ├── setup-04-running-the-apps.md
+│   ├── s04…s13-*.md                    ← one guide per section
+│   └── README.md                       ← index
+│
 ├── prompts/                  ← Every Antigravity prompt, by section + clip
 │   ├── section-03-setup.md
 │   ├── section-04-exploration.md
@@ -122,6 +130,17 @@ The agent drives a real browser through the Playwright MCP server.
 3. Restart Antigravity and confirm the agent can launch a browser
 
 Full step-by-step is in the Section 3 companion article.
+
+---
+
+## Written guides
+
+Every lecture has a written companion in **[`docs/`](docs/README.md)** — the exact
+commands, config, templates, and troubleshooting you cannot pause a video to copy.
+
+Start with **[docs/setup-03-playwright-mcp.md](docs/setup-03-playwright-mcp.md)** if MCP
+gives you trouble, and **[docs/s11-github-actions-ci.md](docs/s11-github-actions-ci.md)**
+when you set up repository secrets.
 
 ---
 

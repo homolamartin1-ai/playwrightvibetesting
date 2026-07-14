@@ -1,5 +1,7 @@
 # Section 8 — Writing the Test Suite
 
+> 📖 **Guide:** [Suite Structure, Fixtures & Credentials](../docs/s08-suite-structure-and-env.md) — the written companion for this section.
+
 Build the suite flow by flow with the test-authoring skill — and refine the skill
 on camera when it hits its limits.
 

@@ -1,5 +1,7 @@
 # Section 4 — Exploring TechShop with an AI Agent
 
+> 📖 **Guide:** [Exploration Notes & Requirements Coverage](../docs/s04-exploration-notes.md) — the written companion for this section.
+
 The agent drives the live browser via Playwright MCP. Nothing here writes test
 files yet — this is discovery (the "exploration hat"). We work one flow at a
 time: explore it, capture what we found, repeat for the next flow, then verify the

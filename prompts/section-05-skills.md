@@ -1,5 +1,7 @@
 # Section 5 — Skills for AI Agents: Building the Toolkit
 
+> 📖 **Guide:** [How Skills Work](../docs/s05-how-skills-work.md) — the written companion for this section.
+
 The centerpiece. Each prompt creates one reusable skill file in
 `playwrightvibetesting/skills/`, then a follow-up prompt proves the skill works. These
 skills are reused (and refined) for the rest of the course — and you keep them.

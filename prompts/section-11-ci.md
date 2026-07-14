@@ -1,5 +1,7 @@
 # Section 11 — Shipping to CI with GitHub Actions
 
+> 📖 **Guide:** [GitHub Actions CI (incl. repo secrets)](../docs/s11-github-actions-ci.md) — the written companion for this section.
+
 The agent drafts the workflow; you review it (especially secrets) and ship it.
 
 ## Course reference

@@ -1,5 +1,7 @@
 # Section 12 — Capstone Project: BookNow
 
+> 📖 **Guide:** [Capstone Brief: BookNow](../docs/s12-capstone-brief.md) — the written companion for this section.
+
 This is the independent project. By design, there are **no ready-made prompts
 here** — writing them is part of the exercise. Instead, this file maps each
 capstone task to the prompt file you adapt from the main course.

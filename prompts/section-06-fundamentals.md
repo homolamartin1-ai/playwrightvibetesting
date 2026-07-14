@@ -1,5 +1,7 @@
 # Section 6 — Playwright Fundamentals & Reading Your First Test
 
+> 📖 **Guide:** [Playwright Cheat Sheet](../docs/s06-playwright-cheatsheet.md) — the written companion for this section.
+
 This section is read-only — we do not write new tests here. Instead we read the
 **first login spec the test-authoring skill produced in Section 5** and learn to
 review it. We use the agent as a tutor and reviewer so that, from here on, you can

@@ -1,5 +1,7 @@
 # Section 7 — From Exploration to Test Cases
 
+> 📖 **Guide:** [Test Case & Matrix Format](../docs/s07-test-case-format.md) — the written companion for this section.
+
 Apply the test-case design skill (Section 6) to the exploration notes (Section 4)
 to produce a complete, prioritised test matrix.
 

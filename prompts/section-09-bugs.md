@@ -1,5 +1,7 @@
 # Section 9 — Finding & Reporting Bugs
 
+> 📖 **Guide:** [Bug Reports & Triage](../docs/s09-bug-report-guide.md) — the written companion for this section.
+
 Run the full suite, triage failures (real bug vs. flaky) with the flake-triage
 skill, and turn confirmed bugs into reports with the bug-reporting skill.
 

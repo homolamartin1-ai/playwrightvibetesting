@@ -1,5 +1,7 @@
 # Section 10 — Stability & Debugging
 
+> 📖 **Guide:** [Debugging & Killing Flakiness](../docs/s10-debugging-and-flakiness.md) — the written companion for this section.
+
 Make the suite trustworthy: kill flakiness, use traces/the debugger, and run the
 regression pass against the fixed app.
 
@@ -116,6 +118,3 @@ because the app is correct.
 not because the tests were loosened. A fully green run against fixed-app means
 verification is genuinely complete: find → fix → re-verify, with you approving
 every change that lands.
-
-**Expected:** a green (or near-green) run against the fixed app. Any remaining red
-is real information about either the fix or the test.

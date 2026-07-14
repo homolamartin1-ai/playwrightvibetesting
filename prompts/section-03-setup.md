@@ -1,5 +1,11 @@
 # Section 3 — Setup
 
+> 📖 **Guides for this section:**
+> [Install the tools](../docs/setup-01-install-tools.md) ·
+> [Fork & clone](../docs/setup-02-fork-and-clone.md) ·
+> [**Playwright MCP**](../docs/setup-03-playwright-mcp.md) ·
+> [Running the apps](../docs/setup-04-running-the-apps.md)
+
 All prompts and commands used in the setup section. Paste prompts into the
 Antigravity chat; the agent runs the commands and reports back.
 
@@ -14,7 +20,7 @@ Antigravity chat; the agent runs the commands and reports back.
 
 > **Setup order:** Clip 1 installs Node + Antigravity, so from Prompt 1 on you paste everything into Antigravity's terminal/chat.
 
-> MCP config and account setup are step-by-step in `udemy-article-mcp-setup.md`.
+> MCP config and account setup are step-by-step in `docs/setup-03-playwright-mcp.md`.
 > Fork from: **https://github.com/homolamartin1-ai/playwrightvibetesting**
 
 ---
@@ -105,7 +111,7 @@ the connection is live. If it cannot open a browser after the reload, the server
 did not load — have it re-check the config path and the entry it added.
 
 > Fallback: if you would rather wire the config manually, the exact entry and
-> file paths are in `udemy-article-mcp-setup.md`.
+> file paths are in `docs/setup-03-playwright-mcp.md`.
 
 ---
 
