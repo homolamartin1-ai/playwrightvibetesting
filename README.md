@@ -1,4 +1,4 @@
-# Vibetesting in 2026: Automated Testing with Playwright & AI Tools — Course Repository
+# Agent vibe testing 2026: Automated Playwright AI Testing — Course Repository
 
 Resources for the Udemy course. Everything you need to follow along is in this repo.
 
